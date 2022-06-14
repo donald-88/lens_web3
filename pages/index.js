@@ -32,7 +32,7 @@ export default function Home() {
                 profile.picture ? (<Image src={profile.picture.original.url} width="60px" height="60px"/>) : (<p>no pic</p>)
               }
               <h2>{profile.handle}</h2>
-              <p>{profile.bio}</p>
+              <p className="">{profile.bio}</p>
             </div>
           </a>
         </Link>
