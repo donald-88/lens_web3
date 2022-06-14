@@ -14,7 +14,6 @@ export default function Home() {
   async function fetchProfile() {
     try {
       const response = await client.query(recommendedProfiles).toPromise()
-      console.log({response})
       setProfiles(response.data.recommendedProfiles)
 
     } catch (error) {
@@ -27,12 +26,16 @@ export default function Home() {
         profiles.map((profile, index) => (
         <Link href={`/profile/${profile.id}`} key={index}>
           <a>
-            <div>
+            <div className="m-4 p-8 bg-gray-400">
               {
-                profile.picture ? (<Image src={profile.picture.original.url} width="60px" height="60px"/>) : (<p>no pic</p>)
+                profile.picture ? (
+                  <Image src={profile.picture.original.url} width="60px" height="60px"/>
+                ) : (<div className="w-20 h-20 bg-black"/>)
               }
-              <h2>{profile.handle}</h2>
-              <p className="">{profile.bio}</p>
+
+              <h2 className="text-xl text-red-700">{profile.name}</h2>
+              <h2 className="text-sm py-2">{profile.handle}</h2>
+              <p className="text-sm">{profile.bio}</p>
             </div>
           </a>
         </Link>
