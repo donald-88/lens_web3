@@ -5,6 +5,9 @@
 
 @layer base{
   body{
-    @apply p-8
+    @apply p-6
+  }
+  p{
+    @apply text-sm
   }
 }
