@@ -2,6 +2,9 @@ import { client, recommendedProfiles } from '../api'
 import Link from 'next/link'
 import Image from 'next/image'
 import PostCard from '../components/postCard'
+import BottomNav from '../components/bottomNav'
+import Header from '../components/header'
+import ProfileCard from '../components/profileCard'
 
 
 export const getStaticProps = async () => {
@@ -17,15 +20,22 @@ export const getStaticProps = async () => {
 const Home = ({profiles}) => {
   return (
     <div>
-      <h1 className="flex justify-center">Explore</h1>
-      {
-        profiles.map(profile => (
-        <Link href={'/profile/' + profile.id} key={profile.id}>
-          <a>
-            <PostCard name={profile.name} handle={profile.handle} post={profile.bio}/>
-          </a>
-        </Link>
-      ))}
+        <Header/>
+        <h2 className="text-lg py-3 px-4">Recommended</h2>
+        <div className="relative flex items-center">
+          <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
+            {
+              profiles.map(profile => (
+              <Link href={'/profile/' + profile.id} key={profile.id}>
+                <a>
+                  <ProfileCard name={profile.name} handle={profile.handle}/>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+      <BottomNav/>
     </div>
   )
 }

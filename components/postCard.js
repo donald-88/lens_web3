@@ -15,17 +15,17 @@ const PostCard = (props) => {
 
         <div className="flex w-full justify-evenly">
           <div className="flex items-center">
-            <p>Mirrors-{props.mirrors}</p>
+            <p>Mirrors - {props.mirrors}</p>
             <button className="w-3 h-3 mx-1 bg-black"></button>
           </div>
 
           <div className="flex items-center">
-            <p>Collects-{props.collects}</p>
+            <p>Collects - {props.collects}</p>
             <button className="w-3 h-3 mx-1 bg-red-700"></button>
           </div>
 
           <div className="flex items-center">
-            <p>Comments-{props.comments}</p>
+            <p>Comments - {props.comments}</p>
             <button className="w-3 h-3 mx-1 bg-black"></button>
           </div>
         </div>

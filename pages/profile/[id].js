@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { ethers } from 'ethers'
 import PostCard from '../../components/postCard'
 import MyButton from '../../components/myButton'
+import BottomNav from '../../components/bottomNav'
 
 import ABI from '../../abi.json'
 const address = "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d"
@@ -62,47 +63,50 @@ const Profile = ({profile, pubs}) => {
 
   return (
     <div>
-      <div className="flex justify-center items-end h-64 w-full">
-        <div className="flex justify-center w-24 h-24 overflow-hidden bg-orange-600 rounded-full">
-          {
-            profile.picture ? (
-              <Image src={profile.picture.original.url} width="200px" height="200px"/>
-            ) : (<div className="w-40 h-40 bg-black"/>)
-          }
-        </div>
-      </div>
-
-      <p className="flex justify-center text-xl text-red-700 pt-3">{profile.name}</p>
-
-      <div className="flex justify-center p-4">
-        <MyButton onClick={connect} title={"Connect"}/>
-        <span className="w-4"/>
-        <MyButton onClick={followAcc} title={"Follow"}/>
-      </div>
-
-      <p className="flex justify-center text-sm">{profile.bio}</p>
-
-      <div className="flex justify-evenly px-6 py-2">
-        <p>Following - {profile.stats.totalFollowing}</p>
-        <p>Followers - {profile.stats.totalFollowers}</p>
-      </div>
-
-
-      <div className="flex flex-col items-center">
-        <div className="flex justify-evenly w-full py-4">
-          <h2>Posts</h2>
-          <h2>Media</h2>
-          <h2>Collections</h2>
+      <div className="p-4">
+        <div className="flex justify-center items-end h-64 w-full">
+          <div className="flex justify-center w-24 h-24 overflow-hidden bg-orange-600 rounded-full">
+            {
+              profile.picture ? (
+                <Image src={profile.picture.original.url} width="200px" height="200px"/>
+              ) : (<div className="w-40 h-40 bg-black"/>)
+            }
+          </div>
         </div>
 
-        <div className="flex flex-col">
-          {
-            pubs.map(pub => (
-              <PostCard post={pub.metadata.content} name={profile.name} handle={profile.handle} mirrors={pub.stats.totalAmountOfMirrors} collects={pub.stats.totalAmountOfCollects} comments={pub.stats.totalAmountOfComments}/>))
-          }
+        <p className="flex justify-center text-xl text-red-700 pt-3">{profile.name}</p>
+
+        <div className="flex justify-center p-4">
+          <MyButton onClick={connect} title={"Connect"}/>
+          <span className="w-4"/>
+          <MyButton onClick={followAcc} title={"Follow"}/>
         </div>
 
+        <p className="flex justify-center text-sm">{profile.bio}</p>
+
+        <div className="flex justify-evenly px-6 py-2">
+          <p>Following - {profile.stats.totalFollowing}</p>
+          <p>Followers - {profile.stats.totalFollowers}</p>
+        </div>
+
+
+        <div className="flex flex-col items-center">
+          <div className="flex justify-evenly w-full py-4">
+            <h2>Posts</h2>
+            <h2>Media</h2>
+            <h2>Collections</h2>
+          </div>
+
+          <div className="flex flex-col">
+            {
+              pubs.map(pub => (
+                <PostCard post={pub.metadata.content} name={profile.name} handle={profile.handle} mirrors={pub.stats.totalAmountOfMirrors} collects={pub.stats.totalAmountOfCollects} comments={pub.stats.totalAmountOfComments}/>))
+            }
+          </div>
+
+        </div>
       </div>
+      <BottomNav/>
     </div>
   )
 }

@@ -5,7 +5,7 @@
 
 @layer base{
   body{
-    @apply p-6
+    @apply bg-white
   }
   p{
     @apply text-sm
