@@ -63,7 +63,7 @@ const Profile = ({profile, pubs}) => {
 
   return (
     <div>
-      <div className="p-4">
+      <div className="">
         <div className="flex justify-center items-end h-64 w-full">
           <div className="flex justify-center w-24 h-24 overflow-hidden bg-orange-600 rounded-full">
             {
@@ -97,7 +97,7 @@ const Profile = ({profile, pubs}) => {
             <h2>Collections</h2>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col mx-4">
             {
               pubs.map(pub => (
                 <PostCard post={pub.metadata.content} name={profile.name} handle={profile.handle} mirrors={pub.stats.totalAmountOfMirrors} collects={pub.stats.totalAmountOfCollects} comments={pub.stats.totalAmountOfComments}/>))

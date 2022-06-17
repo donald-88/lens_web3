@@ -21,7 +21,7 @@ const Home = ({profiles}) => {
   return (
     <div>
         <Header/>
-        <h2 className="text-lg py-3 px-4">Recommended</h2>
+        <h2 className="text-lg py-4 px-4">Recommended</h2>
         <div className="relative flex items-center">
           <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
             {
@@ -33,6 +33,10 @@ const Home = ({profiles}) => {
               </Link>
             ))}
           </div>
+        </div>
+        <h2 className="text-lg py-4 px-4">Explore</h2>
+        <div className="px-4">
+          <PostCard/>
         </div>
 
       <BottomNav/>
