@@ -5,6 +5,7 @@ import PostCard from '../components/postCard'
 import BottomNav from '../components/bottomNav'
 import Header from '../components/header'
 import ProfileCard from '../components/profileCard'
+import SearchBar from '../components/searchBar'
 
 
 export const getStaticProps = async () => {
@@ -21,6 +22,7 @@ const Home = ({profiles}) => {
   return (
     <div>
         <Header/>
+        <SearchBar/>
         <h2 className="text-lg py-4 px-4">Recommended</h2>
         <div className="relative flex items-center">
           <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
