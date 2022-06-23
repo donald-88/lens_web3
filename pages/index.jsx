@@ -1,4 +1,4 @@
-import { client, recommendedProfiles } from '../api'
+import { client, explorePublications, recommendedProfiles } from '../api'
 import Link from 'next/link'
 import Image from 'next/image'
 import PostCard from '../components/postCard'
@@ -10,20 +10,22 @@ import SearchBar from '../components/searchBar'
 
 export const getStaticProps = async () => {
   const response = await client.query(recommendedProfiles).toPromise()
+  const exPubRes = await client.query(explorePublications).toPromise()
   const data = await response.data.recommendedProfiles
+  const pubData = await exPubRes.data.explorePublications
 
   return {
-    props: { profiles: data}
+    props: { profiles: data,
+      exPubs: pubData}
   }
 }
 
 
-const Home = ({profiles}) => {
+const Home = ({profiles, exPubs}) => {
   return (
     <div>
         <Header/>
-        <SearchBar/>
-        <h2 className="text-lg py-4 px-4">Recommended</h2>
+        <h2 className="px-4 py-4 text-lg">Recommended</h2>
         <div className="relative flex items-center">
           <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
             {
@@ -36,7 +38,7 @@ const Home = ({profiles}) => {
             ))}
           </div>
         </div>
-        <h2 className="text-lg py-4 px-4">Explore</h2>
+        <h2 className="px-4 py-4 text-lg">Explore</h2>
         <div className="px-4">
           <PostCard/>
         </div>

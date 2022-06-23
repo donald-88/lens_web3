@@ -2,13 +2,13 @@
 
 const PostCard = (props) => {
   return(
-      <div className="flex flex-col justify-evenly items-center rounded-xl p-4 bg-gray-400">
+      <div className="flex flex-col items-center p-4 my-2 bg-gray-400 justify-evenly rounded-xl">
 
-        <div className="flex justify-start items-center w-full">
-          <div className="w-12 h-12 rounded-full bg-orange-600"></div>
+        <div className="flex items-center justify-start w-full">
+          <div className="w-12 h-12 bg-orange-600 rounded-full"></div>
 
           <div className="flex flex-col items-start px-2">
-            <p className="text-red-700 text-base leading-4">{props.name}</p>
+            <p className="text-base text-red-700 leading-4">{props.name}</p>
             <p className="text-gray-600">@{props.handle}</p>
           </div>
 
