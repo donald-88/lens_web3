@@ -27,7 +27,7 @@ const Home = ({profiles, exPubs}) => {
         <Header/>
         <h2 className="px-4 py-4 text-lg">Recommended</h2>
         <div className="relative flex items-center">
-          <div id="slider" className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth">
+          <div id="slider" className="w-full h-full overflow-x-scroll no-scrollbar scroll whitespace-nowrap scroll-smooth">
             {
               profiles.map(profile => (
               <Link href={'/profile/' + profile.id} key={profile.id}>
