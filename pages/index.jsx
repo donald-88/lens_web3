@@ -25,7 +25,7 @@ const Home = ({profiles, exPubs}) => {
   return (
     <div>
         <Header/>
-        <h2 className="px-4 py-4 text-lg">Recommended</h2>
+        <h2 className="px-4 py-4">Recommended</h2>
         <div className="relative flex items-center">
           <div id="slider" className="w-full h-full overflow-x-scroll no-scrollbar scroll whitespace-nowrap scroll-smooth">
             {
@@ -38,7 +38,7 @@ const Home = ({profiles, exPubs}) => {
             ))}
           </div>
         </div>
-        <h2 className="px-4 py-4 text-lg">Explore</h2>
+        <h2 className="px-4 py-4">Explore</h2>
         <div className="px-4">
           <PostCard post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>

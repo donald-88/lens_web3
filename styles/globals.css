@@ -12,7 +12,15 @@
   }
 
   h4{
-    @apply  text-[12px] font-medium
+    @apply text-[12px] font-medium
+  }
+
+  h2{
+    @apply text-[16px] font-medium
+  }
+
+  h1{
+    @apply text-[20px] font-bold
   }
 
   .no-scrollbar::-webkit-scrollbar {
