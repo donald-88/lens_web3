@@ -40,7 +40,7 @@ const Home = ({profiles, exPubs}) => {
         </div>
         <h2 className="px-4 py-4 text-lg">Explore</h2>
         <div className="px-4">
-          <PostCard/>
+          <PostCard post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>
 
       <BottomNav/>

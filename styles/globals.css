@@ -8,7 +8,11 @@
     @apply bg-white
   }
   p{
-    @apply text-[12px]
+    @apply text-[12px] font-normal
+  }
+
+  h4{
+    @apply  text-[12px] font-medium
   }
 
   .no-scrollbar::-webkit-scrollbar {
