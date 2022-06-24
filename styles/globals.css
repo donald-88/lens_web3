@@ -8,7 +8,7 @@
     @apply bg-white
   }
   p{
-    @apply text-sm
+    @apply text-[12px]
   }
 
   .no-scrollbar::-webkit-scrollbar {
