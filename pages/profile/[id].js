@@ -76,24 +76,51 @@ const Profile = ({profile, pubs}) => {
           </div>
         </div>
 
-        <p className="flex justify-center">{profile.name}</p>
-
-        <div className="flex justify-center p-4">
-          <MyButton onClick={connect} title={"Connect"}/>
-          <span className="w-4"/>
-          <MyButton onClick={followAcc} title={"Follow"}/>
+        <div className="flex flex-col items-center w-full text-center px-[16px] py-[8px]">
+          <h2 className="font-bold">{profile.name}</h2>
+          <p>@{profile.handle}</p>
+          <p className="pt-[4px]">{profile.bio}</p>
         </div>
 
-        <p className="flex justify-center text-sm">{profile.bio}</p>
 
-        <div className="flex px-6 py-2 justify-evenly">
-          <p>Following - {profile.stats.totalFollowing}</p>
-          <p>Followers - {profile.stats.totalFollowers}</p>
+        <div className="flex text-center justify-evenly">
+          <div>
+            <p>Posts</p>
+            <p>10</p>
+          </div>
+        
+          <div>
+            <p>Followers</p>
+            <p>{profile.stats.totalFollowers}</p>
+          </div>
+
+
+          <div>
+            <p>Following</p>
+            <p>{profile.stats.totalFollowing}</p>
+          </div>
+
+        </div>
+
+
+
+
+
+        <div className="flex justify-center my-[8px] mx-[16px]">
+          <MyButton onClick={followAcc} title={"Follow"}/>
+          <span className="w-[4px]"/>
+          <div className="w-[46px] flex">
+            <MyButton onClick={connect} title={"C"}/>
+          </div>
+          <span className="w-[4px]"/>
+          <div className="w-[46px] flex">
+            <MyButton title={"P"}/>
+          </div>
         </div>
 
 
         <div className="flex flex-col items-center">
-          <div className="flex w-full py-4 justify-evenly">
+          <div className="flex w-full justify-evenly">
             <h2>Posts</h2>
             <h2>Media</h2>
             <h2>Collections</h2>

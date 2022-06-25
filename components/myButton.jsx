@@ -1,6 +1,6 @@
 const MyButton = (props) => {
   return(
-    <button onClick={props.onClick} className="flex justify-center items-center w-20 rounded-lg p-2 mb-2 bg-gray-400 text-sm">
+    <button onClick={props.onClick} className="flex items-center justify-center flex-1 py-[12px] text-[12px] bg-gray-400 rounded-full">
       {props.title}
     </button>
   )
