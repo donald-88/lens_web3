@@ -4,8 +4,9 @@ import { ethers } from 'ethers'
 import PostCard from '../../components/postCard'
 import MyButton from '../../components/myButton'
 import BottomNav from '../../components/bottomNav'
-
 import ABI from '../../abi.json'
+
+
 const address = "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d"
 
 
@@ -64,17 +65,18 @@ const Profile = ({profile, pubs}) => {
   return (
     <div>
       <div className="">
-        <div className="flex justify-center items-end h-64 w-full">
-          <div className="flex justify-center w-24 h-24 overflow-hidden bg-orange-600 rounded-full">
+        <div className="flex flex-col items-center w-full h-[239px]">
+          <div className="w-full h-[204px] bg-black"></div>
+          <div className="flex justify-center w-[70px] h-[70px] overflow-hidden bg-orange-600 rounded-full -mt-[35px]">
             {
               profile.picture ? (
-                <Image src={profile.picture.original.url} width="200px" height="200px"/>
+                <Image src={profile.picture.original.url} width="70px" height="70px"/>
               ) : (<div className="w-40 h-40 bg-black"/>)
             }
           </div>
         </div>
 
-        <p className="flex justify-center text-xl text-red-700 pt-3">{profile.name}</p>
+        <p className="flex justify-center">{profile.name}</p>
 
         <div className="flex justify-center p-4">
           <MyButton onClick={connect} title={"Connect"}/>
@@ -84,14 +86,14 @@ const Profile = ({profile, pubs}) => {
 
         <p className="flex justify-center text-sm">{profile.bio}</p>
 
-        <div className="flex justify-evenly px-6 py-2">
+        <div className="flex px-6 py-2 justify-evenly">
           <p>Following - {profile.stats.totalFollowing}</p>
           <p>Followers - {profile.stats.totalFollowers}</p>
         </div>
 
 
         <div className="flex flex-col items-center">
-          <div className="flex justify-evenly w-full py-4">
+          <div className="flex w-full py-4 justify-evenly">
             <h2>Posts</h2>
             <h2>Media</h2>
             <h2>Collections</h2>
