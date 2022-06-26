@@ -29,6 +29,20 @@ export const getProfiles = `
         }
       }
       handle
+      coverPicture {
+        ... on NftImage {
+          contractAddress
+          tokenId
+          uri
+          verified
+        }
+        ... on MediaSet {
+          original {
+            url
+            mimeType
+          }
+        }
+      }
       stats {
         totalFollowers
         totalFollowing

@@ -65,8 +65,14 @@ const Profile = ({profile, pubs}) => {
   return (
     <div>
       <div className="">
-        <div className="flex flex-col items-center w-full h-[239px]">
-          <div className="w-full h-[204px] bg-black"></div>
+        <div className="flex flex-col items-center w-full h-[189px]">
+          <div className="w-full h-[154px] bg-orange-600 overflow-hidden relative">
+            {
+              profile.coverPicture ? (
+                <Image src={profile.coverPicture.original.url} layout="fill"/>
+              ) : (<div className="bg-black h-full w-full"/>)
+            }
+          </div>
           <div className="flex justify-center w-[70px] h-[70px] overflow-hidden bg-orange-600 rounded-full -mt-[35px]">
             {
               profile.picture ? (
@@ -76,19 +82,13 @@ const Profile = ({profile, pubs}) => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center w-full text-center px-[16px] py-[8px]">
+        <div className="flex flex-col items-center w-full text-center px-[16px] pt-4 pb-2">
           <h2 className="font-bold">{profile.name}</h2>
           <p>@{profile.handle}</p>
-          <p className="pt-[4px]">{profile.bio}</p>
         </div>
 
 
         <div className="flex text-center justify-evenly">
-          <div>
-            <p>Posts</p>
-            <p>10</p>
-          </div>
-        
           <div>
             <p>Followers</p>
             <p>{profile.stats.totalFollowers}</p>
@@ -99,11 +99,10 @@ const Profile = ({profile, pubs}) => {
             <p>Following</p>
             <p>{profile.stats.totalFollowing}</p>
           </div>
-
         </div>
 
 
-
+        <p className="pt-[4px]">{profile.bio}</p>
 
 
         <div className="flex justify-center my-[8px] mx-[16px]">
