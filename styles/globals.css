@@ -5,7 +5,7 @@
 
 @layer base{
   body{
-    @apply bg-white
+    @apply bg-white m-0
   }
   p{
     @apply text-[12px] font-normal
