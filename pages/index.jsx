@@ -42,8 +42,9 @@ const Home = ({profiles, exPubs}) => {
         <div className="px-[16px]">
           <PostCard post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>
-
-      <BottomNav/>
+      <div className="px-[16px]">
+        <BottomNav/>
+      </div>
     </div>
   )
 }
