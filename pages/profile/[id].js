@@ -137,7 +137,7 @@ const Profile = ({profile, pubs}) => {
             <p>Collections</p>
           </div>
 
-          <div>
+          <div className="flex flex-col w-full px-[16px]">
             {
               pubs.map(pub => (
                 <PostCard post={pub.metadata.content} name={profile.name} handle={profile.handle} mirrors={pub.stats.totalAmountOfMirrors} collects={pub.stats.totalAmountOfCollects} comments={pub.stats.totalAmountOfComments}/>))

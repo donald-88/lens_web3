@@ -2,7 +2,7 @@
 
 const PostCard = (props) => {
   return(
-      <div className="flex flex-col mx-4 mb-[8px] p-4 bg-gray-400 rounded-[22px]">
+      <div className="flex flex-col mb-[8px] p-4 bg-gray-400 rounded-[22px]">
 
         <div className="flex items-center justify-start w-full">
           <div className="w-[40px] h-[40px] bg-orange-600 rounded-full"></div>

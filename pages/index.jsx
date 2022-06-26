@@ -39,7 +39,7 @@ const Home = ({profiles, exPubs}) => {
           </div>
         </div>
         <h2 className="px-4 py-4">Explore</h2>
-        <div>
+        <div className="px-[16px]">
           <PostCard post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>
 
