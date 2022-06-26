@@ -69,7 +69,7 @@ const Profile = ({profile, pubs}) => {
           <div className="w-full h-[154px] bg-orange-600 overflow-hidden relative">
             {
               profile.coverPicture ? (
-                <Image src={profile.coverPicture.original.url} layout="fill"/>
+                <Image src={profile.coverPicture.original.url} layout="fill" objectFit="cover"/>
               ) : (<div className="bg-black h-full w-full"/>)
             }
           </div>
@@ -82,27 +82,27 @@ const Profile = ({profile, pubs}) => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center w-full text-center px-[16px] pt-4 pb-2">
-          <h2 className="font-bold">{profile.name}</h2>
+        <div className="flex flex-col items-center w-full text-center px-4 pt-4 pb-2">
+          <h2 className="font-bold leading-4">{profile.name}</h2>
           <p>@{profile.handle}</p>
         </div>
 
 
-        <div className="flex text-center justify-evenly">
-          <div>
-            <p>Followers</p>
-            <p>{profile.stats.totalFollowers}</p>
+        <div className="flex text-center justify-center">
+          <div className="flex items-center px-2">
+            <p className="text-[14px] font-medium px-1">{profile.stats.totalFollowers}</p>
+            <p className="text-[10px] font-light">Followers</p>
           </div>
 
-
-          <div>
-            <p>Following</p>
-            <p>{profile.stats.totalFollowing}</p>
+          <div className="flex items-center px-2">
+            <p className="text-[14px] font-medium px-1">{profile.stats.totalFollowing}</p>
+            <p className="text-[10px] font-light">Following</p>
           </div>
         </div>
 
-
-        <p className="pt-[4px]">{profile.bio}</p>
+        <div className="flex justify-center w-full px-4 break-all text-center">
+          <p>{profile.bio}</p>
+        </div>
 
 
         <div className="flex justify-center my-[8px] mx-[16px]">
@@ -139,7 +139,7 @@ const Profile = ({profile, pubs}) => {
           <div className="flex flex-col w-full px-[16px]">
             {
               pubs.map(pub => (
-                <PostCard post={pub.metadata.content} name={profile.name} handle={profile.handle} mirrors={pub.stats.totalAmountOfMirrors} collects={pub.stats.totalAmountOfCollects} comments={pub.stats.totalAmountOfComments}/>))
+                <PostCard image={profile.picture.original.url} post={pub.metadata.content} name={profile.name} handle={profile.handle} mirrors={pub.stats.totalAmountOfMirrors} collects={pub.stats.totalAmountOfCollects} comments={pub.stats.totalAmountOfComments}/>))
             }
           </div>
 

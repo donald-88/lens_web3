@@ -1,11 +1,13 @@
-
+import Image from 'next/image'
 
 const PostCard = (props) => {
   return(
       <div className="flex flex-col mb-[8px] p-4 bg-gray-400 rounded-[22px]">
 
         <div className="flex items-center justify-start w-full">
-          <div className="w-[40px] h-[40px] bg-orange-600 rounded-full"></div>
+          <div className="w-[40px] h-[40px] bg-orange-600 rounded-full relative overflow-hidden">
+            <Image src={props.image} alt="profile picture" width="40" height="40"/>
+          </div>
 
           <div className="flex flex-col items-start px-2">
             <h4 className="font-medium leading-3">{props.name}</h4>
@@ -15,7 +17,7 @@ const PostCard = (props) => {
         </div>
 
         <div className="flex justify-start w-full py-4">
-          <p className="break-words text-ellispis">{props.post}</p>
+          <p className="break-all text-ellispis">{props.post}</p>
         </div>
 
         <div className="flex w-full justify-evenly">
