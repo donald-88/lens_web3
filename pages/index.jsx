@@ -31,7 +31,7 @@ const Home = ({profiles, exPubs}) => {
             {
               profiles.map(profile => (
               <Link href={'/profile/' + profile.id} key={profile.id}>
-                <a>
+                <a> 
                   <ProfileCard name={profile.name} handle={profile.handle}/>
                 </a>
               </Link>
@@ -42,9 +42,7 @@ const Home = ({profiles, exPubs}) => {
         <div className="px-[16px]">
           <PostCard post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>
-      <div className="px-[16px]">
         <BottomNav/>
-      </div>
     </div>
   )
 }

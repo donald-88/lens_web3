@@ -146,9 +146,7 @@ const Profile = ({profile, pubs}) => {
 
         </div>
       </div>
-      <div className="px-[16px]">
-        <BottomNav/>
-      </div>
+      <BottomNav/>
     </div>
   )
 }
