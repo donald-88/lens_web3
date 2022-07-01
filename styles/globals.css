@@ -1,3 +1,6 @@
+@import url('/fonts/stylesheet.css');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +8,7 @@
 
 @layer base{
   body{
-    @apply bg-white m-0
+    @apply bg-primary m-0 font-sfui
   }
   p{
     @apply text-[12px] font-normal

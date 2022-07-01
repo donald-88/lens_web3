@@ -5,7 +5,6 @@ const Header = () => {
     <div className="flex items-end justify-between px-4 py-4">
       <h1>Lensapp</h1>
       <div className="flex items-center">
-        <div className="w-[30px] h-[30px] rounded-full bg-black"></div>
         <span className="w-2"/>
         <button>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

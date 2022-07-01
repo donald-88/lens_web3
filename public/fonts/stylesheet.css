@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'SFUIText';
+    src: url('SFUIText-Light.otf') format('otf');
+    font-weight: light;
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'SFUIText';
+    src: url('SFUIText-Bold.otf') format('otf');
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'SFUIText';
+    src: url('SFUIText-Regular.otf') format('otf');
+    font-weight: regular;
+    font-style: regular;
+}

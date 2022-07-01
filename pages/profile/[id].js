@@ -100,14 +100,14 @@ const Profile = ({profile, pubs}) => {
           </div>
         </div>
 
-        <div className="flex justify-center w-full px-4 break-all text-center">
+        <div className="flex justify-center w-full pb-2 px-4 break-all text-center">
           <p>{profile.bio}</p>
         </div>
 
 
-        <div className="flex justify-center my-[8px] mx-[16px]">
+        <div className="flex justify-center mt-2 mx-4">
           <MyButton onClick={followAcc} title={"Follow"}/>
-          <span className="w-[4px]"/>
+          <span className="w-1"/>
           <div className="w-[46px] flex">
             <button className="py-[12px] flex justify-center items-center w-[46px] rounded-full bg-gray-400" onClick={connect}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@ const Profile = ({profile, pubs}) => {
 </svg>
             </button>
           </div>
-          <span className="w-[4px]"/>
+          <span className="w-1"/>
           <div className="w-[46px] flex">
             <button className="py-[12px] flex justify-center items-center w-[46px] rounded-full bg-gray-400" onClick={connect}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
