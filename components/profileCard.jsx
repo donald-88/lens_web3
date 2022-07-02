@@ -1,11 +1,16 @@
 const ProfileCard = (props) => {
   return(
-    <div className="w-[135px] h-[192px] ml-[16px] -mr-[8px] inline-block cursor-pointer bg-gray-400 rounded-[22px] px-[5px]">
-      <div className="w-full h-[39px] flex items-center justify-between px-[5px]">
-        <p className="truncate">
-          {props.name}
-        </p>
+    <div className="w-[80px] h-[80px] ml-[16px] -mr-[8px] inline-block cursor-pointer">
+      <div className="w-full h-full">
+        <div className="w-full h-full flex items-center overflow-hidden justify-center bg-gray-600 rounded-full p-[3px]">
+          <div className="w-full h-full flex juistify-center items-center rounded-full bg-accent">
+          </div>
+        </div>
+
       </div>
+      <h4 className="w-full truncate flex justify-center font-medium mt-1">
+        {props.name}
+      </h4>
     </div>
   )
 }

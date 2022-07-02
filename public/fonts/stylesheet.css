@@ -17,3 +17,17 @@
     font-weight: regular;
     font-style: regular;
 }
+
+@font-face {
+    font-family: 'SFUIText';
+    src: url('SFUIText-Medium.otf') format('otf');
+    font-weight: medium;
+    font-style: medium;
+}
+
+@font-face {
+    font-family: 'SFUIText';
+    src: url('SFUIText-Semibold.otf') format('otf');
+    font-weight: semibold;
+    font-style: semibold;
+}

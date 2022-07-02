@@ -5,7 +5,7 @@ import PostCard from '../components/postCard'
 import BottomNav from '../components/bottomNav'
 import Header from '../components/header'
 import ProfileCard from '../components/profileCard'
-import SearchBar from '../components/searchBar'
+import Avatar from '../components/avatar'
 
 
 export const getStaticProps = async () => {
