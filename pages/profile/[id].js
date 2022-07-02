@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { ethers } from 'ethers'
 import PostCard from '../../components/postCard'
 import MyButton from '../../components/myButton'
-import BottomNav from '../../components/bottomNav'
 import ABI from '../../abi.json'
 
 
@@ -145,7 +144,6 @@ const Profile = ({profile, pubs}) => {
 
         </div>
       </div>
-      <BottomNav/>
     </div>
   )
 }

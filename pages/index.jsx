@@ -2,7 +2,6 @@ import { client, explorePublications, recommendedProfiles } from '../api'
 import Link from 'next/link'
 import Image from 'next/image'
 import PostCard from '../components/postCard'
-import BottomNav from '../components/bottomNav'
 import Header from '../components/header'
 import ProfileCard from '../components/profileCard'
 import Avatar from '../components/avatar'
@@ -43,7 +42,6 @@ const Home = ({profiles, exPubs}) => {
           <PostCard image="/public/add-square.svg" post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
           <PostCard image="/public/add-square.svg" post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>
-        <BottomNav/>
     </div>
   )
 }
