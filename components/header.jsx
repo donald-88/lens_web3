@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Header = () => {
   return(
-    <div className="flex items-end justify-between px-4 py-4">
+    <div className="flex items-center justify-between px-4 py-4">
       <h1>Lensapp</h1>
       <div className="flex items-center">
         <span className="w-2"/>

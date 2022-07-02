@@ -41,6 +41,7 @@ const Home = ({profiles, exPubs}) => {
         <h2 className="px-4 py-4">Explore</h2>
         <div className="px-[16px]">
           <PostCard image="/public/add-square.svg" post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
+          <PostCard image="/public/add-square.svg" post="Stop comparing me to people, no Iam not them" name="Saba" handle="sabalife"/>
         </div>
         <BottomNav/>
     </div>
