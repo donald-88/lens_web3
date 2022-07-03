@@ -8,12 +8,11 @@ const SearchPage = ()=>{
 
   return(
     <div>
-      <div className="m-4 space-y-4">
-        <h1>Search post or profile</h1>
+      <div className="h-4"/>
+      <div className="m-4">
         <SearchBar onChange={e => setSearchString(e.target.value)} value={searchString}/>
       </div>
-      <div className="px-4 space-y-4">
-        <h2>Popular</h2>
+      <div className="px-4">
       </div>
 
 
