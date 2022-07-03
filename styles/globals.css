@@ -8,7 +8,7 @@
 
 @layer base{
   body{
-    @apply bg-primary m-0 font-sfui
+    @apply bg-primary m-0 font-sfui placeholder-secondary placeholder-[12px]
   }
   p{
     @apply text-[12px] font-normal

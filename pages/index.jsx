@@ -7,10 +7,13 @@ import ProfileCard from '../components/profileCard'
 import Avatar from '../components/avatar'
 
 
-export const getStaticProps = async () => {
-  const response = await client.query(recommendedProfiles).toPromise()
+export const getServerSideProps = async () => {
+  //responses//
+  const profileRes = await client.query(recommendedProfiles).toPromise()
   const exPubRes = await client.query(explorePublications).toPromise()
-  const data = await response.data.recommendedProfiles
+
+  //data//
+  const data = await profileRes.data.recommendedProfiles
   const pubData = await exPubRes.data.explorePublications
 
   return {

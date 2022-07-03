@@ -43,13 +43,13 @@ const BottomNav = () => {
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
                 <path
                   d="M22 22L20 20"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
@@ -82,19 +82,19 @@ const BottomNav = () => {
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8 12H16"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
                 <path
                   d="M12 16V8"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
                 <path
                   d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
@@ -114,13 +114,13 @@ const BottomNav = () => {
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12.1601 10.87C12.0601 10.86 11.9401 10.86 11.8301 10.87C9.45006 10.79 7.56006 8.84 7.56006 6.44C7.56006 3.99 9.54006 2 12.0001 2C14.4501 2 16.4401 3.99 16.4401 6.44C16.4301 8.84 14.5401 10.79 12.1601 10.87Z"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
                 <path
                   d="M7.15997 14.56C4.73997 16.18 4.73997 18.82 7.15997 20.43C9.90997 22.27 14.42 22.27 17.17 20.43C19.59 18.81 19.59 16.17 17.17 14.56C14.43 12.73 9.91997 12.73 7.15997 14.56Z"
-                  stroke="#000000"
+                  stroke="#A5A5A5"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"/>
