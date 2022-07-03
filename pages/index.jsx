@@ -34,7 +34,7 @@ const Home = ({profiles, exPubs}) => {
               profiles.map(profile => (
               <Link href={'/profile/' + profile.id} key={profile.id}>
                 <a>
-                  <ProfileCard name={profile.name} handle={profile.handle}/>
+                  <ProfileCard name={profile.name} handle={profile.handle} image={profile.picture.original.url}/>
                 </a>
               </Link>
             ))}

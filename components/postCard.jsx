@@ -1,20 +1,23 @@
 import Avatar from '../components/avatar'
+import Image from 'next/image'
 
 const PostCard = (props) => {
   return(
-    <div className="flex flex-col mb-[8px] p-4 bg-gray-400 rounded-[16px]">
+    <div className="flex flex-col mb-[8px] py-2">
 
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center">
-          <div className="w-[30px] h-[30px]">
-            <Avatar/>
+          <div className="w-[40px] h-[40px]">
+            <Avatar>
+              <Image src={props.image} width="38px" height="38px"/>
+            </Avatar>
           </div>
 
           <div className="flex flex-col h-full items-start justify-center px-2">
             <h4 className="font-medium leading-3">
               {props.name}
             </h4>
-            <p className="text-gray-600 font-light text-[11px]">@{props.handle}</p>
+            <p className="text-secondary font-light text-[11px]">@{props.handle}</p>
           </div>
         </div>
 
@@ -43,7 +46,7 @@ const PostCard = (props) => {
       </div>
 
       <div className="flex justify-start w-full py-4">
-        <p className="break-all text-ellispis">
+        <p className="break-all text-ellispis text-center">
           {props.post}
         </p>
       </div>
