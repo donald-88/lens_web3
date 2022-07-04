@@ -1,4 +1,4 @@
-import { client, getProfiles, getPublications, recommendedProfiles } from '../../api'
+import { client, getProfiles, getPublications, recommendedProfiles } from '../api/api'
 import Image from 'next/image'
 import { ethers } from 'ethers'
 import PostCard from '../../components/postCard'
@@ -83,6 +83,7 @@ const Profile = ({profile, pubs}) => {
               {
                 profile.picture ? (
                   <Image
+                    alt="profile picture"
                     src={profile.picture.original.url}
                     width="70px"
                     height="70px"/>

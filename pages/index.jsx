@@ -1,4 +1,4 @@
-import { client, explorePublications, recommendedProfiles } from '../api'
+import { client, explorePublications, recommendedProfiles } from './api/api'
 import Link from 'next/link'
 import Image from 'next/image'
 import PostCard from '../components/postCard'
@@ -34,7 +34,7 @@ const Home = ({profiles, exPubs}) => {
               profiles.map(profile => (
               <Link href={'/profile/' + profile.id} key={profile.id}>
                 <a>
-                  <ProfileCard name={profile.name} handle={profile.handle} image={profile.picture.original.url}/>
+                  <ProfileCard name={profile.name} handle={profile.handle} image={profile.picture? (profile.picture.original.url): ("/public/empty.jpg")}/>
                 </a>
               </Link>
             ))}

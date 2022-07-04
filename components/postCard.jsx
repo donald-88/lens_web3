@@ -9,7 +9,7 @@ const PostCard = (props) => {
         <div className="flex items-center">
           <div className="w-[40px] h-[40px]">
             <Avatar>
-              <Image src={props.image} width="38px" height="38px"/>
+              <Image alt="profile picture" src={props.image} width="38px" height="38px"/>
             </Avatar>
           </div>
 
