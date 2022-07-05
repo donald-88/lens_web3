@@ -5,25 +5,44 @@ import PostCard from '../components/postCard'
 import Header from '../components/header'
 import ProfileCard from '../components/profileCard'
 import Avatar from '../components/avatar'
+import { useEffect, useState } from 'react'
 
 
-export const getServerSideProps = async () => {
+//export const getServerSideProps = async () => {
   //responses//
-  const profileRes = await client.query(recommendedProfiles).toPromise()
-  const exPubRes = await client.query(explorePublications).toPromise()
+//  const profileRes = await client.query(recommendedProfiles).toPromise()
+//  const exPubRes = await client.query(explorePublications).toPromise()
 
   //data//
-  const data = await profileRes.data.recommendedProfiles
-  const pubData = await exPubRes.data.explorePublications
+//  const data = await profileRes.data.recommendedProfiles
+//  const pubData = await exPubRes.data.explorePublications
 
-  return {
-    props: { profiles: data,
-      exPubs: pubData}
+//  return {
+//    props: { profiles: data,
+//      exPubs: pubData}
+//  }
+//}
+
+
+const Home = () => {
+
+  const [profiles, setProfiles] = useState([])
+  const [searchString, setSearchString] = useState('')
+
+  useEffect(() => {
+    fetchProfiles()
+  }, [])
+
+  async function fetchProfiles() {
+    try {
+      const response = await client.query(recommendedProfiles).toPromise()
+      setProfiles(response.data.recommendedProfiles)
+    } catch (err) {
+      console.log('error fetching recommended profiles: ', err)
+    }
   }
-}
 
 
-const Home = ({profiles, exPubs}) => {
   return (
     <div>
         <Header/>
@@ -31,10 +50,10 @@ const Home = ({profiles, exPubs}) => {
         <div className="relative flex items-center">
           <div id="slider" className="w-full h-full overflow-x-scroll no-scrollbar scroll whitespace-nowrap scroll-smooth">
             {
-              profiles.map(profile => (
-              <Link href={'/profile/' + profile.id} key={profile.id}>
+              profiles.map((profile, index) => (
+              <Link href={'/profile/' + profile.id} key={index}>
                 <a>
-                  <ProfileCard name={profile.name} handle={profile.handle} image={profile.picture? (profile.picture.original.url): ("/public/empty.jpg")}/>
+                  <ProfileCard name={profile.name} handle={profile.handle} image={profile.picture.original.url}/>
                 </a>
               </Link>
             ))}

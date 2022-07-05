@@ -6,7 +6,7 @@ const ProfileCard = (props) => {
     <div className="w-[70px] h-[70px] ml-[16px] -mr-[8px] inline-block cursor-pointer">
       <div className="w-full h-full">
         <Avatar>
-          <Image alt="profile picture" src={props.image} width="68px" height="68px"/>
+          <Image alt="profile picture" src={props.image} width="68px" height="68px" />
         </Avatar>
       </div>
       <h4 className="w-full truncate flex justify-center font-medium mt-1">
