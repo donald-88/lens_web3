@@ -1,6 +1,5 @@
 import SearchBar from '../components/searchBar'
 import PostCard from '../components/postCard'
-import { recommendedProfiles, searchProfiles } from '../api'
 import { useState } from 'react'
 
 const SearchPage = ()=>{

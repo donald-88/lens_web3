@@ -1,0 +1,7 @@
+overwrite: true
+schema: "https://api.lens.dev/"
+documents: "graphql/**/*.graphql"
+generates:
+  generated/graphql.js:
+    plugins:
+      - "urql-introspection"

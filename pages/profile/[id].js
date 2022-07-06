@@ -1,4 +1,4 @@
-import { client, getProfiles, getPublications, recommendedProfiles } from '../api/api'
+
 import Image from 'next/image'
 import { ethers } from 'ethers'
 import PostCard from '../../components/postCard'
@@ -39,16 +39,20 @@ export const getStaticProps = async (context) => {
 }
 
 
-async function connect() {
-  const account = await window.ethereum.request({
-    method: "eth_requestAccounts"
-  })
-}
+
 
 
 
 const Profile = ({profile, pubs}) => {
 
+//connect to metamask wallet
+  async function connect() {
+    const account = await window.ethereum.request({
+      method: "eth_requestAccounts"
+    })
+  }
+
+//follow user and sign transaction
   async function followAcc() {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const sign = provider.getSigner()

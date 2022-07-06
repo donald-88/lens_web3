@@ -1,0 +1,48 @@
+query Profiles(
+    $id: ProfileId!
+  ) {
+  profiles(request: { profileIds: [$id], limit: 1 }) {
+    items {
+      id
+      name
+      bio
+      picture {
+        ... on NftImage {
+          contractAddress
+          tokenId
+          uri
+          verified
+        }
+        ... on MediaSet {
+          original {
+            url
+          }
+        }
+      }
+      handle
+      coverPicture {
+        ... on NftImage {
+          contractAddress
+          tokenId
+          uri
+          verified
+        }
+        ... on MediaSet {
+          original {
+            url
+            mimeType
+          }
+        }
+      }
+      stats {
+        totalFollowers
+        totalFollowing
+        totalPosts
+        totalComments
+        totalMirrors
+        totalPublications
+        totalCollects
+      }
+    }
+  }
+}
